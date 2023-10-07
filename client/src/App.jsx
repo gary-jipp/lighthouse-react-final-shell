@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import useData from './hooks/useData';
 import DataList from './components/Dataist';
+import Status from './components/Status';
 import './App.css';
 
 export default function App() {
@@ -15,12 +16,7 @@ export default function App() {
     <div className="App">
       <h1>Hello React World</h1>
 
-      <section>
-        {!error &&
-          <>API Version: <code>{status.version}</code></>}
-        {!!error &&
-          <>API Error: <code>{error}</code></>}
-      </section>
+      <Status status={status} error={error} />
 
       <input type="text" value={text} onChange={e => setText(e.target.value)} />
       <button onClick={addFriend}>Add</button>
