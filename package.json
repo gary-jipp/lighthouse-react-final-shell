@@ -7,7 +7,7 @@
     "install:server": "cd server && npm install",
     "install:client": "cd client && npm install",
     "build:client": "cd client && npm run build",
-    "deploy:client": "mkdir ./public && mv -f client/dist/* ./public",
+    "deploy:client": "mkdir -p ./public && mv -f client/dist/* ./public",
     "install": "(npm run install:server) && (npm run install:client)",
     "build": "(npm install) && (npm run build:client) && (npm run deploy:client)",
     "start": "(cd server && npm start);"
