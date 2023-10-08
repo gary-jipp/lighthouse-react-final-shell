@@ -26,6 +26,21 @@ const useData = function() {
       });
   }, []);
 
+  // Better!
+  useEffect(() => {
+    Promise.all([axios.get('/api/status'), axios.get('/api/data')])
+      .then(all => {
+        setStatus(all[0].data);
+        setData(all[1].data);
+      })
+      .catch(err => {
+        console.log(err.message);
+        setError(err.message);
+      });
+
+  }, []);
+
+
   const addItem = function(name) {
     axios.post("/api/data", {name})
       .then(res => {
