@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>My Anything App</h1>
+      <h1>Anything App</h1>
       <Status status={status} error={error} />
 
       <input value={text} onChange={e => setText(e.target.value)} ></input>
