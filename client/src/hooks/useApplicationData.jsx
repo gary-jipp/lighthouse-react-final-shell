@@ -18,7 +18,6 @@ const useApplicationData = function() {
         console.log(err.message);
         setError(err.message);
       });
-
   }, []);
 
 
