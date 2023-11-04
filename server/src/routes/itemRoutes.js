@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const routes = function(pool) {
-  const {getItems} = require('../database/items')(pool);
+  const {getItems, addItem, deleteItem} = require('../database/items')(pool);
 
   router.get("/", (req, res) => {
-    getItems(pool)
+    getItems()
       .then(data => {
         res.json(data);
       })
@@ -17,7 +17,9 @@ const routes = function(pool) {
 
   router.post("/", (req, res) => {
     const name = req.body.name;
-    addItem(pool, name)
+    console.log("addItem()", name);
+    // return res.json({name});
+    addItem(name)
       .then(data => {
         res.json(data);
       })
@@ -25,13 +27,11 @@ const routes = function(pool) {
         console.log(err.message);
         res.status(500).json({error: err.message});
       });
-
-    res.json(item);
   });
 
   router.delete("/:id", (req, res) => {
     const id = req.params.id;
-    deleteItem(pool, id)
+    deleteItem(id)
       .then(data => {
         res.json(data);
       })
@@ -40,9 +40,6 @@ const routes = function(pool) {
         res.status(500).json({error: err.message});
       });
   });
-
-
-
 
   return router;
 };

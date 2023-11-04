@@ -6,23 +6,20 @@ When the React App starts, it makes a single API call to the API server for the 
 
 Example deployment branch for "render" cloud platform
 
-### Built for node 16
+Built for node 16 or 18
 
-Copy `env.example` to `.env` to override the default env values
-https://render.com/
-https://dashboard.render.com/
-#### Edit Repos that Render can see
+### Setup
+Copy `env.example` to `.env` to override the default env values.
+See server `README.md` for details
+
+### Render Cloud Service
+- https://render.com/
+- https://dashboard.render.com/
+
+### Edit Repos that Render can see
 - Github -> User Settings
 - Integrations.Applications
 - Render - Configure
-
-
-###  Initialize Database
-- Open `psql`
-- `CREATE DATABASE <name>` (where name is the name you want to use)
-- `\i database/00-schema.sql`
-- `\i database/01-seeds.sql` (if you want to load seeds)
-
 
 ### Starting as a Single App (for Production only)
 ```
