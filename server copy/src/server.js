@@ -18,10 +18,6 @@ app.use(express.static(public));
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Connect to Database
-const pool = require('./database/connect');
-pool.connect().catch(err => console.log(err.message));
-
 let data = [
   {id: uniqid(), name: "Nathan Brown"},
   {id: uniqid(), name: "James Holden"},
@@ -30,18 +26,31 @@ let data = [
   {id: uniqid(), name: "Tom Cruise "},
 ];
 
-// Use Routed Endpoints
-const itemRoutes = require('./routes/itemRoutes');
-app.use('/api/items', itemRoutes(pool));
-
-// Simple Endpoing - no routes module
 app.get("/api/status", (req, res) => {
   res.json({version: "1.01"});
+});
+
+app.get("/api/data", (req, res) => {
+  res.json(data);
+});
+
+app.post("/api/data", (req, res) => {
+  const name = req.body.name;
+  const item = {id: uniqid(), name};
+  data.push(item);
+  res.json(item);
+});
+
+app.delete("/api/data/:id", (req, res) => {
+  const id = req.params.id;
+  data = data.filter(item => item.id !== id);
+  res.status(204).send();
 });
 
 app.use(function(req, res) {
   res.status(404);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}!`);
