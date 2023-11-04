@@ -11,7 +11,6 @@ const cwd = process.cwd();
 const public = path.join(cwd, "..", "public")
 app.use("/", express.static(public));
 
-
 // So we can read JSON body requests
 app.use(express.json());
 app.use(morgan('dev'));
