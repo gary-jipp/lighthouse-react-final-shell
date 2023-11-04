@@ -6,6 +6,7 @@ const useData = function() {
   const [status, setStatus] = useState({});
   const [data, setData] = useState([]);
 
+  // Using 2 Seperate Fetches
   useEffect(() => {
     axios.get('/api/status')
       .then((res) => {
@@ -26,7 +27,7 @@ const useData = function() {
       });
   }, []);
 
-  // Better!
+  // Better way to do this, both at once!
   useEffect(() => {
     Promise.all([axios.get('/api/status'), axios.get('/api/data')])
       .then(all => {
