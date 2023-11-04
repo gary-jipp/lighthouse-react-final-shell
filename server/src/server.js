@@ -22,19 +22,11 @@ app.use(morgan('dev'));
 const pool = require('./database/connect');
 pool.connect().catch(err => console.log(err.message));
 
-let data = [
-  {id: uniqid(), name: "Nathan Brown"},
-  {id: uniqid(), name: "James Holden"},
-  {id: uniqid(), name: "Roy Trenneman"},
-  {id: uniqid(), name: "Maurice Moss"},
-  {id: uniqid(), name: "Tom Cruise "},
-];
-
 // Use Routed Endpoints
 const itemRoutes = require('./routes/itemRoutes');
 app.use('/api/items', itemRoutes(pool));
 
-// Simple Endpoing - no routes module
+// Simple Endpoint - no routes module
 app.get("/api/status", (req, res) => {
   res.json({version: "1.01"});
 });
