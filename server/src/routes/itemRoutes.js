@@ -16,8 +16,6 @@ const routes = function(pool) {
 
   router.post("/", (req, res) => {
     const name = req.body.name;
-    console.log("addItem()", name);
-    // return res.json({name});
     addItem(name).then(data => {
       res.json(data);
     })

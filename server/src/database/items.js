@@ -13,11 +13,9 @@ module.exports = function(pool) {
 
   const addItem = function(name) {
     const sql = 'insert into items (name) values ($1) returning *';
-    console.log({name});
 
     return pool.query(sql, [name])
       .then(res => {
-        console.log(res.rows);
         return res.rows[0];
       });
   };
@@ -27,7 +25,6 @@ module.exports = function(pool) {
 
     return pool.query(sql, [id])
       .then(res => {
-        console.log(res.rows);
         return res.rows[0];
       });
   };
