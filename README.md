@@ -6,7 +6,7 @@ When the React App starts, it makes a single API call to the API server for the 
 
 Example deployment branch for "render" cloud platform
 
-Built for node 16 or 18
+Built for node 18
 
 ### Setup
 Copy `env.example` to `.env` to override the default env values.

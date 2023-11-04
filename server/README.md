@@ -1,6 +1,9 @@
 # Express Server
 
-###  Initialize Database
+## Using Container Database
+ - Follow `README.md` in the `postgres` dir of project root
+
+### using Local Postgres Database
 - Open `psql`
 - `CREATE DATABASE demo` (or whatever name you want to use)
 - `\i database/00-schema.sql`
