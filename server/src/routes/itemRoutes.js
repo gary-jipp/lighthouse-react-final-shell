@@ -5,10 +5,9 @@ const routes = function(pool) {
   const {getItems, addItem, deleteItem} = require('../database/items')(pool);
 
   router.get("/", (req, res) => {
-    getItems()
-      .then(data => {
-        res.json(data);
-      })
+    getItems().then(data => {
+      res.json(data);
+    })
       .catch(err => {
         console.log(err.message);
         res.status(500).json({error: err.message});
@@ -19,10 +18,9 @@ const routes = function(pool) {
     const name = req.body.name;
     console.log("addItem()", name);
     // return res.json({name});
-    addItem(name)
-      .then(data => {
-        res.json(data);
-      })
+    addItem(name).then(data => {
+      res.json(data);
+    })
       .catch(err => {
         console.log(err.message);
         res.status(500).json({error: err.message});
@@ -31,10 +29,9 @@ const routes = function(pool) {
 
   router.delete("/:id", (req, res) => {
     const id = req.params.id;
-    deleteItem(id)
-      .then(data => {
-        res.json(data);
-      })
+    deleteItem(id).then(data => {
+      res.json(data);
+    })
       .catch(err => {
         console.log(err.message);
         res.status(500).json({error: err.message});

@@ -3,7 +3,7 @@ const {Pool} = require("pg");
 module.exports = function(pool) {
 
   const getItems = function() {
-    const sql = "select * from items";
+    const sql = "select * from items order by id desc";
 
     return pool.query(sql)
       .then(res => {
@@ -23,7 +23,7 @@ module.exports = function(pool) {
   };
 
   const deleteItem = function(id) {
-    const sql = 'delete intfrom items where id=($1) returning *';
+    const sql = 'delete from items where id=($1) returning *';
 
     return pool.query(sql, [id])
       .then(res => {

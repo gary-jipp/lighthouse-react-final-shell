@@ -1,12 +1,12 @@
 import {useState} from 'react';
-import useData from './hooks/useData';
 import DataList from './components/DataList';
 import Status from './components/Status';
+import useApplicationData from './hooks/useApplicationData';
 import './App.css';
 
 export default function App() {
   const [text, setText] = useState("");
-  const {status, error, data, addItem, deleteItem} = useData();
+  const {status, error, data, addItem, deleteItem} = useApplicationData();
 
   const addFriend = function() {
     addItem(text);
