@@ -6,7 +6,7 @@ import './App.css';
 
 export default function App() {
   const [text, setText] = useState("");
-  const {status, error, data, addItem, deleteItem} = useApplicationData();
+  const {status, error, data, addItem, deleteItem, fetchItems} = useApplicationData();
 
   const addFriend = function() {
     addItem(text);
@@ -18,6 +18,7 @@ export default function App() {
 
       <Status status={status} error={error} />
 
+      <button onClick={fetchItems}>Reload</button>
       <input type="text" value={text} onChange={e => setText(e.target.value)} />
       <button onClick={addFriend}>Add</button>
 

@@ -1,14 +1,12 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 
 const useApplicationData = function() {
   const [error, setError] = useState();
   const [status, setStatus] = useState({});
   const [data, setData] = useState([]);
 
-
-  // Fetch data on first render
-  useEffect(() => {
+  const fetchItems = useCallback(() => {
     Promise.all([axios.get('/api/status'), axios.get('/api/items')])
       .then(all => {
         setStatus(all[0].data);
@@ -18,6 +16,12 @@ const useApplicationData = function() {
         console.log(err.message);
         setError(err.message);
       });
+  }, []);
+
+
+  // Fetch data on first render
+  useEffect(() => {
+    fetchItems();
   }, []);
 
 
@@ -44,7 +48,7 @@ const useApplicationData = function() {
     setData(data.filter(item => item.id !== id));
   };
 
-  return {status, error, data, addItem, deleteItem};
+  return {status, error, data, addItem, deleteItem, fetchItems};
 };
 
 export default useApplicationData;
