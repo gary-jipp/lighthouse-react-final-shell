@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// This lets us serve the compiled React App from ../public
 const cwd = process.cwd();
 const public = path.join(cwd, "..", "public")
 app.use("/", express.static(public));
