@@ -21,6 +21,10 @@ See server `README.md` for details
 - Integrations.Applications
 - Render - Configure
 
+### Database Setup
+- Database must be running before starting
+- use container or local database. Details in server `README.md`
+
 ### Starting as a Single App (for Production only)
 ```
 npm install
