@@ -19,7 +19,6 @@ app.use(morgan('dev'));
 
 // Connect to Database
 const pool = require('./database/connect');
-pool.connect().catch(err => console.log(err.message));
 
 // Use Routed Endpoints
 const itemRoutes = require('./routes/itemRoutes');
