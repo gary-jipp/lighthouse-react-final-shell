@@ -23,7 +23,8 @@ See server `README.md` for details
 
 ### Database Setup
 - Database must be running before starting
-- use container or local database. Details in server `README.md`
+- Details for local database in server `README.md`
+- don't a container database unless you really want a challenge
 
 ### Starting as a Single App (for Production only)
 ```
