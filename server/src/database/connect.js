@@ -16,8 +16,7 @@ const pool = new Pool(config);
 pool.connect()
   .then((conn) => {
     const {host, database, user} = conn.connectionParameters;
-    const info = {host, database, user};
-    console.log("Database Conected:", info);
+    console.log("Database Conected:", {host, database, user});
   })
   .catch(err => console.log("database connection failed:", err.message));
 
