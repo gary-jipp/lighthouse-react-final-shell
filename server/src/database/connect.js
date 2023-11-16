@@ -7,17 +7,16 @@ const config = {
   database: process.env.DB_NAME
 };
 
-delete config.password;  // So we don't log the password
-console.log("Database Config:", config);
+
+// Strip password from config for logging
+const {password, ...conf} = config;
+console.log("Database Config:", conf);
 const pool = new Pool(config);
 
 pool.connect()
   .then((conn) => {
-    const info = {
-      host: conn.connectionParameters.host,
-      database: conn.connectionParameters.user,
-      user: conn.connectionParameters.user,
-    };
+    const {host, database, user} = conn.connectionParameters;
+    const info = {host, database, user};
     console.log("Database Conected:", info);
   })
   .catch(err => console.log("database connection failed:", err.message));
