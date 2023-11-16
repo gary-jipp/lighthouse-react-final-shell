@@ -7,7 +7,7 @@ const config = {
   database: process.env.DB_NAME
 };
 
-delete config.password;  // So we don;t log the password
+delete config.password;  // So we don't log the password
 console.log("Database Config:", config);
 const pool = new Pool(config);
 
