@@ -4,8 +4,6 @@ React-Express Shell app ready for node deployment to a cloud platform.  React an
 
 When the React App starts, it makes a single API call to the API server for the version number and renders that, or an error if API call was unsucessful
 
-Example deployment branch for "render" cloud platform
-
 Built for node 18
 
 ### Environment Setup (don't skip this!)
