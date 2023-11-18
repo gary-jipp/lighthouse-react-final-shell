@@ -11,7 +11,7 @@ Copy `env.example` to `.env` to override the default env values.
 See server `README.md` for details
 
 ### Database Setup
-- Database must be running before starting
+- Database must be running before starting the server app
 - Details for local database in server `README.md`
 - don't use a container database unless you really want a challenge
 
