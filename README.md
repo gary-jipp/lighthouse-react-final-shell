@@ -25,7 +25,7 @@ npm start
 Browse to http://localhost:8080
 
 ### Starting as Individual Apps (for Development)
-```
+```bash
 cd server
 npm install
 npm run local
