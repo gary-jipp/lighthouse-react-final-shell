@@ -26,11 +26,11 @@ Browse to http://localhost:8080
 
 ### Starting as Individual Apps (for Development)
 ```
-cd server-express
+cd server
 npm install
 npm run local
 
-cd client-react
+cd client
 npm install
 npm start
 ```
