@@ -15,7 +15,7 @@ See server `README.md` for details
 ### Database Setup
 - Database must be running before starting
 - Details for local database in server `README.md`
-- don't a container database unless you really want a challenge
+- don't use a container database unless you really want a challenge
 
 ### Starting as a Single App (for Production only)
 ```bash
