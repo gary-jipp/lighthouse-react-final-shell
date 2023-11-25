@@ -42,7 +42,7 @@ barking
 ### generated_photo_index:
 primary_key
 user_created
-photo_name
+generation_id
 
 ### liked_generated_breeds
 primary_key
