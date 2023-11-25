@@ -24,7 +24,7 @@ A website that takes input from the user to generate a potential mixed breed. Th
 
     ### Stretch features
 
-    - Stretch: User can preform the same generation but instead of picking breeds they can select desired end traits. Will fetch from API top two breeds and generate new possible breed
+    - Stretch: User can preform the same generation but instead of picking breeds they can select desired end traits. Will fetch from API top two breeds and    generate new possible breed
     - Users can feed their own pet photos/images for more personable blends/renders
     - Choosing percentage blends (50/50, 60/40) etc
 
