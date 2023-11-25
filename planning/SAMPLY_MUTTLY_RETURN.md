@@ -1,3 +1,9 @@
+muttly
+{ "breed_name": "Golden Collie", "good_with_children": 5, "good_with_other_dogs": 5, "shedding": 3.5, "grooming": 3, "drooling": 1.5, "coat_length": 1, "good_with_strangers": 4.5, "playfulness": 4, "protectiveness": 3, "trainability": 4, "energy": 3.5, "barking": 3, "height_male": 23, "height_female": 23, "weight_male": 60, "weight_female": 60, "description": "The Golden Collie is a friendly and sociable breed known for its excellent temperament. They are great with children and other dogs. This breed has a moderate level of shedding and requires regular grooming. They are not excessive droolers and have a short coat. The Golden Collie is generally welcoming towards strangers and loves to play. They are moderately protective and trainable. With a moderate energy level, they require regular exercise. Their barking tendency is average. Overall, the Golden Collie is a well-rounded and adaptable breed." }
+
+
+
+what i uploaded:
 [
   {
     "name": "Golden Retriever",

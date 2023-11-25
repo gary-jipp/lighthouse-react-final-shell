@@ -1,0 +1,195 @@
+{
+  "dogBreeds": [
+    {
+      "breedName": "Labrador Retriever",
+      "sheddingLevels": "Moderate",
+      "height": "22-24 inches",
+      "weight": "55-80 pounds",
+      "friendliness": "High with children and other animals",
+      "intelligence": "High, easy to train",
+      "exerciseRequirements": "High",
+      "description": "Labrador Retrievers are friendly and outgoing. They are known for their intelligence and versatility. Labs may be prone to hip dysplasia, a genetic issue affecting their health and lifespan."
+    },
+    {
+      "breedName": "German Shepherd",
+      "sheddingLevels": "Moderate to High",
+      "height": "22-26 inches",
+      "weight": "50-90 pounds",
+      "friendliness": "Good with children, may be reserved with strangers",
+      "intelligence": "Very High, highly trainable",
+      "exerciseRequirements": "High",
+      "description": "German Shepherds are loyal and protective. They excel in various roles, including police and service work. Hip dysplasia is a genetic concern for this breed."
+    },
+    {
+      "breedName": "Golden Retriever",
+      "sheddingLevels": "Moderate",
+      "height": "21.5-24 inches",
+      "weight": "55-75 pounds",
+      "friendliness": "High with children and other animals",
+      "intelligence": "High, easy to train",
+      "exerciseRequirements": "High",
+      "description": "Golden Retrievers are gentle and friendly. They are known for their intelligence and are great family pets. Prone to certain heart conditions, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Bulldog",
+      "sheddingLevels": "Low",
+      "height": "14-15 inches",
+      "weight": "40-50 pounds",
+      "friendliness": "Good with children, can be stubborn",
+      "intelligence": "Moderate, may be stubborn",
+      "exerciseRequirements": "Low to Moderate",
+      "description": "Bulldogs are docile and friendly. They have a distinctive appearance. Due to their brachycephalic nature, they may have respiratory issues affecting their health and lifespan."
+    },
+    {
+      "breedName": "Poodle",
+      "sheddingLevels": "Low to Moderate",
+      "height": "Standard: 15 inches and above, Miniature: 10-15 inches, Toy: 10 inches and below",
+      "weight": "Standard: 45-70 pounds, Miniature: 15-17 pounds, Toy: 5-10 pounds",
+      "friendliness": "High with children and other animals",
+      "intelligence": "Very High, highly trainable",
+      "exerciseRequirements": "Moderate",
+      "description": "Poodles are intelligent and versatile. They come in three sizes. Prone to certain eye issues that may affect their health and lifespan."
+    },
+    {
+      "breedName": "Beagle",
+      "sheddingLevels": "Low",
+      "height": "13-15 inches",
+      "weight": "20-30 pounds",
+      "friendliness": "Good with children and other animals",
+      "intelligence": "Moderate, may be stubborn",
+      "exerciseRequirements": "Moderate to High",
+      "description": "Beagles are friendly and curious. They are known for their strong sense of smell. Prone to obesity, which can impact their health and lifespan."
+    },
+    {
+      "breedName": "Boxer",
+      "sheddingLevels": "Low",
+      "height": "21.5-25 inches",
+      "weight": "50-70 pounds",
+      "friendliness": "High with children, may be wary of strangers",
+      "intelligence": "High, can be stubborn",
+      "exerciseRequirements": "High",
+      "description": "Boxers are energetic and playful. They are known for their loyalty. Prone to certain heart conditions that may affect their health and lifespan."
+    },
+    {
+      "breedName": "Dachshund",
+      "sheddingLevels": "Low",
+      "height": "Standard: 8-9 inches, Miniature: 5-6 inches, Toy: under 5 inches",
+      "weight": "Standard: 16-32 pounds, Miniature: 9-15 pounds, Toy: under 8 pounds",
+      "friendliness": "Good with children, may be reserved with strangers",
+      "intelligence": "Moderate, may be stubborn",
+      "exerciseRequirements": "Moderate",
+      "description": "Dachshunds are clever and lively. They have a distinctive long body and short legs. Prone to back problems, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Siberian Husky",
+      "sheddingLevels": "High",
+      "height": "20-24 inches",
+      "weight": "35-60 pounds",
+      "friendliness": "Good with children, may have a strong prey drive",
+      "intelligence": "Moderate, independent-minded",
+      "exerciseRequirements": "Very High",
+      "description": "Siberian Huskies are friendly and outgoing. They have a thick double coat. Prone to certain eye issues and hip dysplasia, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Chihuahua",
+      "sheddingLevels": "Low",
+      "height": "5-8 inches",
+      "weight": "2-6 pounds",
+      "friendliness": "Good with older children, may be reserved with strangers",
+      "intelligence": "Moderate, may be stubborn",
+      "exerciseRequirements": "Low",
+      "description": "Chihuahuas are small and alert. They are known for their big personalities. Prone to dental issues, which can impact their health and lifespan."
+    },
+    {
+      "breedName": "Rottweiler",
+      "sheddingLevels": "Moderate",
+      "height": "22-27 inches",
+      "weight": "80-135 pounds",
+      "friendliness": "Good with children, can be aloof with strangers",
+      "intelligence": "High, needs consistent training",
+      "exerciseRequirements": "High",
+      "description": "Rottweilers are strong and confident. They are excellent guard dogs. Prone to certain joint issues, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Shih Tzu",
+      "sheddingLevels": "Low",
+      "height": "8-11 inches",
+      "weight": "9-16 pounds",
+      "friendliness": "Good with children and other animals",
+      "intelligence": "Moderate, may be independent",
+      "exerciseRequirements": "Low",
+      "description": "Shih Tzus are friendly and affectionate. They have a distinctive long, flowing coat. Prone to certain respiratory issues, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Great Dane",
+      "sheddingLevels": "Low",
+      "height": "28-34 inches",
+      "weight": "110-175 pounds",
+      "friendliness": "Good with children, can be reserved with strangers",
+      "intelligence": "Moderate, may be stubborn",
+      "exerciseRequirements": "Moderate",
+      "description": "Great Danes are gentle giants. They are known for their impressive size. Prone to certain heart issues, impacting their health and lifespan."
+    },
+    {
+      "breedName": "Cavalier King Charles Spaniel",
+      "sheddingLevels": "Moderate",
+      "height": "12-13 inches",
+      "weight": "13-18 pounds",
+      "friendliness": "High with children and other animals",
+      "intelligence": "Moderate, eager to please",
+      "exerciseRequirements": "Moderate",
+      "description": "Cavalier King Charles Spaniels are affectionate and graceful. They are known for their silky, smooth coat. Prone to certain heart conditions, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Doberman Pinscher",
+      "sheddingLevels": "Low to Moderate",
+      "height": "24-28 inches",
+      "weight": "60-100 pounds",
+      "friendliness": "Good with children, can be reserved with strangers",
+      "intelligence": "Very High, needs consistent training",
+      "exerciseRequirements": "High",
+      "description": "Doberman Pinschers are loyal and alert. They are known for their sleek, muscular build. Prone to certain heart conditions and hip dysplasia, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Border Collie",
+      "sheddingLevels": "Moderate",
+      "height": "18-22 inches",
+      "weight": "30-55 pounds",
+      "friendliness": "High with children and other animals",
+      "intelligence": "Very High, highly trainable",
+      "exerciseRequirements": "Very High",
+      "description": "Border Collies are highly intelligent and energetic. They excel in obedience and agility. May be prone to certain hereditary eye conditions, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Australian Shepherd",
+      "sheddingLevels": "Moderate to High",
+      "height": "18-23 inches",
+      "weight": "40-65 pounds",
+      "friendliness": "Good with children, may be reserved with strangers",
+      "intelligence": "Very High, highly trainable",
+      "exerciseRequirements": "High",
+      "description": "Australian Shepherds are intelligent and agile. They are known for their herding abilities. Prone to certain hereditary eye conditions, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Australian Kelpie",
+      "sheddingLevels": "Low to Moderate",
+      "height": "17-20 inches",
+      "weight": "25-45 pounds",
+      "friendliness": "Good with children and other animals",
+      "intelligence": "Very High, highly trainable",
+      "exerciseRequirements": "Very High",
+      "description": "Australian Kelpies are energetic and intelligent herders. They are known for their agility. Generally healthy, but may be prone to hip dysplasia, affecting their health and lifespan."
+    },
+    {
+      "breedName": "Pembroke Welsh Corgi",
+      "sheddingLevels": "Moderate",
+      "height": "10-12 inches",
+      "weight": "25-30 pounds",
+      "friendliness": "Good with children and other animals",
+      "intelligence": "High, may have a stubborn streak",
+      "exerciseRequirements": "Moderate to High",
+      "description": "Pembroke Welsh Corgis are lively and affectionate. They have a distinctive appearance with short legs. Prone to certain hereditary conditions like hip dysplasia, affecting their health and lifespan."
+    }
+  ]
+}
+
