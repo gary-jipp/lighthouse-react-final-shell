@@ -104,4 +104,15 @@ const options = {
           "photoRealStrength": null,
           "generation_elements": []
         }
-      }
+      } 
+
+
+    //   Alternative ***
+
+    // Reading further into the docs, they have a 
+    // useful webhook functionality that will allow us to just grab the images 
+    // in one request. We will need to create an end point that is accessible to the web 
+    // to be able to recieve the data. (Not local host). We could host this on heroku to do so, I believe. 
+
+    // Here are the docs for reference: 
+    https://docs.leonardo.ai/docs/guide-to-the-webhook-callback-feature#setting-the-webhook-callback
