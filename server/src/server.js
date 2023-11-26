@@ -30,6 +30,11 @@ const userRoutes = require('./routes/userRoute');
 app.use('/api/user', userRoutes(pool));
 
 
+const ingredientsRoutes = require('./routes/ingredientsRoutes');
+app.use('/api/ingredients',ingredientsRoutes(pool));
+
+const recipesRoutes = require('./routes/recipesRoutes');
+app.use('/api/recipes',recipesRoutes(pool));
 
 
 app.listen(PORT, () => {
