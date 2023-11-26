@@ -15,9 +15,9 @@ const routes = function(pool) {
   });
 
   router.post("/", (req, res) => {
-    const name = req.body.name;
-    const quantity=req.body.quantity;
-    addingredients(name,quantity).then(data => {
+    const {name,quantity} = req.body;
+    addingredients({name,quantity})
+    .then(data => {
       res.json(data);
     })
       .catch(err => {
