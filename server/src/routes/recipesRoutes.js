@@ -16,7 +16,8 @@ const routes = function(pool) {
 
   router.post("/", (req, res) => {
     const { name, description, instructions, nutritional_information, image_url, category_id, user_id } = req.body;
-    addrecipes(name).then(data => {
+    addrecipes({ name, description, instructions, nutritional_information, image_url, category_id, user_id })
+    .then(data => {
       res.json(data);
     })
       .catch(err => {
