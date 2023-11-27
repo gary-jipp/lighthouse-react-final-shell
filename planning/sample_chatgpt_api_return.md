@@ -8,6 +8,31 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 
 
+here is the chat gtp4.0 version of the same request:
+
+{
+  id: 'chatcmpl-8PcoTNb931i6zB6E0TJhARqLIRgTg',
+  object: 'chat.completion',
+  created: 1701118089,
+  model: 'gpt-4-0613',
+  choices: [ { index: 0, message: [Object], finish_reason: 'stop' } ],
+  usage: { prompt_tokens: 13, completion_tokens: 276, total_tokens: 289 }
+}
+The American Bulldog is a breed of domestic dog. Contrary to its name, the American Bulldog is not native to America but is believed to have originated from the English Bulldog.
+
+The breed is muscular and heavy set, typically weighing between 60 to 130 pounds. They stand between 20 to 28 inches tall at the shoulder. They have a smooth coat that may come in a variety of colors but is usually white or white with patches.
+
+American Bulldogs are known for their friendly and protective nature, which makes them excellent family pets and guardians. They are known for their bravery and courage and were originally used for bull-baiting, a popular sport in the 17th century.
+
+Their personality is described as friendly, assertive, and confident. They get along well with children and usually bond closely with their families. However, they may sometimes be aggressive with other dogs or animals, so it's important to socialize them from a young age.
+
+American Bulldogs are generally healthy, but they can be susceptible to certain health conditions such as hip dysplasia, allergies, and certain types of cancer. They require a good amount of exercise and mental stimulation to stay happy and healthy. Like all breeds, they also require regular veterinary checkups and a balanced diet.
+
+Overall, American Bulldogs are a beloved breed known for their strength, loyalty, and love for their families.
+
+
+
+
 
 async function main() {
   const chatCompletion = await openai.chat.completions.create({
