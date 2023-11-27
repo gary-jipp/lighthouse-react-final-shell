@@ -18,7 +18,7 @@ const options = {
     negative_prompt: 'collar, clothing, duplicate ears, lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated paws, poorly drawn paws, poorly drawn face, mutation, deformed, blurry, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, username, watermark, signature',
     presetStyle: 'LEONARDO',
     guidance_scale: 7,
-    num_images: 8,
+    num_images: 1,
     promptMagic: false,
     promptMagicStrength: 0.5
   })
