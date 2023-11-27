@@ -80,3 +80,11 @@ CREATE TABLE liked_generated_breeds (
   like_status BOOLEAN
 );
 
+CREATE TABLE new_breed_queries (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  generated_breeds_id INTEGER REFERENCES generated_breeds(id) ON DELETE CASCADE,
+  breed_one INTEGER REFERENCES dog_breeds(id) ON DELETE CASCADE,
+  breed_two INTEGER REFERENCES dog_breeds(id) ON DELETE CASCADE
+);
+
