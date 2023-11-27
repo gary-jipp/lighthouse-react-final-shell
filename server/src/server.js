@@ -24,14 +24,11 @@ const pool = require('./database/connect');
 const itemRoutes = require('./routes/itemRoutes');
 app.use('/api/items', itemRoutes(pool));
 
-// Simple Endpoint - no routes module
-app.get("/api/status", (req, res) => {
-  res.json({version: "1.01"});
-});
+const useRoutes = require('./routes/itemRoutes');
+app.use('/api/items', itemRoutes(pool));
 
-app.use(function(req, res) {
-  res.status(404);
-});
+
+
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}!`);
