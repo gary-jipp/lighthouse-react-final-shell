@@ -1,28 +1,33 @@
 
 // Fetch
 const options = {
-    method: 'POST',
-    headers: {
-      accept: 'application/json',
-      'content-type': 'application/json',
-      authorization: 'Bearer api-token'
-    },
-    body: JSON.stringify({
-      height: 512,
-      modelId: '6bef9f1b-29cb-40c7-b9df-32b51c1f67d3',
-      prompt: 'A Great Dane/Pit Bull puppy looking cute and happy.',
-      width: 512,
-      guidance_scale: 10,
-      imagePromptWeight: 30,
-      public: true,
-      nsfw: false
-    })
-  };
-  
-  fetch('https://cloud.leonardo.ai/api/rest/v1/generations', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    authorization: 'Bearer api-token'
+  },
+  body: JSON.stringify({
+    height: 512,
+    modelId: 'e316348f-7773-490e-adcd-46757c738eb7',
+    prompt: 'A Greyhound/St Bernard looking cute and happy.',
+    width: 512,
+    init_generation_image_id: '8aa11359-c714-4ffd-a9d6-43ea1dcdb957',
+    init_strength: 0.2,
+    nsfw: false,
+    negative_prompt: 'collar, clothing, duplicate ears, lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated paws, poorly drawn paws, poorly drawn face, mutation, deformed, blurry, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, username, watermark, signature',
+    presetStyle: 'LEONARDO',
+    guidance_scale: 7,
+    num_images: 1,
+    promptMagic: false,
+    promptMagicStrength: 0.5
+  })
+};
+
+fetch('https://cloud.leonardo.ai/api/rest/v1/generations', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
 
 //Response 
 {
@@ -35,17 +40,17 @@ const options = {
 //   You then need to take the gnerationId and input it into another fetch: 
 
 const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      authorization: 'Bearer api-token'
-    }
-  };
-  
-  fetch('https://cloud.leonardo.ai/api/rest/v1/generations/75925cd2-fb65-4e8c-84c0-6cc010a528e3', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err)); 
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    authorization: 'Bearer api token'
+  }
+};
+
+fetch('https://cloud.leonardo.ai/api/rest/v1/generations/47d8c010-bcf4-48b0-8c94-ba1dae7e8143', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
 
 
     //Response  
