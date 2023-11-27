@@ -20,6 +20,8 @@ app.use(morgan('dev'));
 // Connect to Database
 const pool = require('./database/connect');
 
+const { Configuration, OpenAIApi } = require("openai");
+
 // Use Routed Endpoints
 const itemRoutes = require('./routes/itemRoutes');
 app.use('/api/items', itemRoutes(pool));

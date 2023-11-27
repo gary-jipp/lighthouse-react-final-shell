@@ -1,6 +1,6 @@
 
 
-
+[x] "Pug"
 [x] "Labrador Retriever",
 [x] "Bearded Collie"
 [x] "German Shepherd",

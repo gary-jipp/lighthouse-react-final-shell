@@ -34,7 +34,7 @@ INSERT INTO dog_breeds (
     ('https://api-ninjas.com/images/dogs/american_staffordshire_terrier.jpg', 3, 3, 2, 1, 1, 1, 4, 3, 5, 3, 3, 3, 19, 19, 70, 55, 18, 18, 55, 40, 'American Staffordshire Terrier'),
     ('https://api-ninjas.com/images/dogs/boston_terrier.jpg', 5, 4, 2, 2, 1, 1, 5, 5, 3, 4, 4, 2, 17, 17, 25, 25, 15, 15, 12, 12, 'Boston Terrier'),
     ('https://api-ninjas.com/images/dogs/bull_terrier.jpg', 3, 1, 3, 2, 1, 1, 4, 4, 3, 3, 4, 3, 22, 22, 70, 70, 21, 21, 50, 50, 'Bull Terrier'),
-    ('https://api-ninjas.com/images/dogs/irish_terrier.jpg', 5, 1, 2, 1, 1, 1, 3, 3, 5, 3, 3, 3, 18, 18, 27, 25, 18, 18, 27, 25, 'Irish Terrier')
+    ('https://api-ninjas.com/images/dogs/irish_terrier.jpg', 5, 1, 2, 1, 1, 1, 3, 3, 5, 3, 3, 3, 18, 18, 27, 25, 18, 18, 27, 25, 'Irish Terrier'),
     ('https://api-ninjas.com/images/dogs/cavalier_king_charles_spaniel.jpg', 5, 5, 2, 2, 2, 1, 4, 3, 3, 4, 3, 3, 13, 13, 18, 18, 12, 12, 13, 13, 'Cavalier King Charles Spaniel'),
     ('https://api-ninjas.com/images/dogs/cocker_spaniel.jpg', 5, 5, 3, 4, 2, 1, 4, 3, 3, 4, 4, 3, 15.5, 15.5, 30, 25, 14.5, 14.5, 25, 20, 'Cocker Spaniel'),
     ('https://api-ninjas.com/images/dogs/english_springer_spaniel.jpg', 3, 4, 3, 2, 3, 1, 4, 4, 3, 5, 4, 3, 20, 20, 50, 40, 20, 20, 50, 40, 'English Springer Spaniel'),
@@ -58,38 +58,39 @@ INSERT INTO dog_breeds (
     ('https://api-ninjas.com/images/dogs/chihuahua.jpg', 1, 3, 2, 1, 1, 2, 2, 4, 4, 3, 4, 5, 8, 8, 6, 6, 5, 5, 4, 4, 'Chihuahua'),
     ('https://api-ninjas.com/images/dogs/shiba_inu.jpg', 3, 3, 3, 2, 1, 1, 3, 3, 5, 2, 3, 3, 16.5, 16.5, 23, 17, 14.5, 14.5, 23, 17, 'Shiba Inu'),
     ('https://api-ninjas.com/images/dogs/pomeranian.jpg', 3, 3, 2, 3, 1, 1, 3, 3, 4, 3, 3, 4, 7, 7, 7, 7, 6, 6, 3, 3, 'Pomeranian'),
-    ("https://api-ninjas.com/images/dogs/bernese_mountain_dog.jpg", 5, 5, 5, 3, 3, 1, 4, 4, 3, 4, 4, 3, 27.5, 27.5, 115, 95, 25, 25, 80, 70, "Bernese Mountain Dog"),
-    ("https://api-ninjas.com/images/dogs/miniature_schnauzer.jpg", 5, 3, 3, 4, 2, 1, 3, 4, 4, 5, 3, 5, 14, 14, 20, 20, 12, 12, 11, 11, "Miniature Schnauzer"),
-    ("https://api-ninjas.com/images/dogs/havanese.jpg", 5, 5, 2, 3, 1, 1, 5, 5, 3, 4, 3, 4, 11.5, 11.5, 13, 13, 8.5, 8.5, 7, 7, "Havanese"),
-    ("https://api-ninjas.com/images/dogs/bullmastiff.jpg", 3, 3, 3, 1, 3, 1, 3, 3, 5, 4, 4, 1, 27, 27, 130, 120, 25, 25, 110, 100, "Bullmastiff"),
-    ("https://api-ninjas.com/images/dogs/newfoundland.jpg", 5, 5, 3, 2, 5, 1, 5, 3, 5, 3, 3, 1, 28, 28, 150, 120, 28, 28, 130, 100, "Newfoundland"),
-    ("https://api-ninjas.com/images/dogs/dalmatian.jpg", 3, 3, 4, 2, 2, 1, 4, 4, 4, 4, 4, 3, 24, 24, 70, 70, 19, 19, 45, 45, "Dalmatian"),
-    ("https://api-ninjas.com/images/dogs/maltese.jpg", 3, 3, 1, 4, 1, 1, 3, 3, 4, 3, 3, 3, 9, 9, 8.8, 8.8, 7, 7, 6.6, 6.6, "Maltese"),
-    ("https://api-ninjas.com/images/dogs/weimaraner.jpg", 5, 3, 3, 2, 2, 1, 3, 5, 5, 5, 5, 3, 27, 27, 90, 75, 25, 25, 70, 55, "Weimaraner"),
-    ("https://api-ninjas.com/images/dogs/basset_hound.jpg", 5, 5, 2, 3, 4, 1, 3, 3, 3, 2, 4, 4, 15, 14, 65, 65, 12, 11, 40, 40, "Basset Hound"),
-    ("https://api-ninjas.com/images/dogs/scottish_terrier.jpg", 3, 2, 2, 3, 2, 1, 3, 4, 5, 3, 3, 4, 10, 10, 22, 21, 10, 10, 19, 18, "Scottish Terrier"),
-    ("https://api-ninjas.com/images/dogs/rhodesian_ridgeback.jpg", 5, 3, 3, 2, 2, 1, 3, 3, 5, 4, 3, 2, 27, 27, 85, 70, 25, 25, 85, 70, "Rhodesian Ridgeback"),
-    ("https://api-ninjas.com/images/dogs/akita.jpg", 3, 1, 3, 3, 1, 1, 2, 3, 5, 3, 4, 2, 28, 28, 130, 100, 26, 26, 100, 70, "Akita"),
-    ("https://api-ninjas.com/images/dogs/saint_bernard.jpg", 5, 3, 3, 2, 5, 1, 3, 3, 5, 3, 3, 1, 30, 30, 180, 140, 28, 28, 140, 120, "Saint Bernard"),
-    ("https://api-ninjas.com/images/dogs/pembroke_welsh_corgi.jpg", 3, 4, 4, 2, 1, 1, 4, 4, 5, 4, 4, 4, 12, 12, 31, 28, 10, 10, 24, 24, "Pembroke Welsh Corgi"),
-    ("https://api-ninjas.com/images/dogs/staffordshire_bull_terrier.jpg", 5, 3, 2, 2, 3, 1, 4, 4, 5, 5, 4, 3, 16, 16, 38, 34, 14, 14, 28, 24, "Staffordshire Bull Terrier"),
-    ("https://api-ninjas.com/images/dogs/west_highland_white_terrier.jpg", 5, 3, 3, 3, 1, 1, 4, 5, 5, 3, 4, 5, 11, 11, 20, 20, 11, 11, 15, 15, "West Highland White Terrier"),
-    ("https://api-ninjas.com/images/dogs/irish_setter.jpg", 5, 5, 3, 3, 2, 1, 5, 5, 3, 4, 5, 3, 27, 27, 70, 60, 27, 27, 70, 60, "Irish Setter"),
-    ("https://api-ninjas.com/images/dogs/alaskan_malamute.jpg", 3, 3, 3, 3, 1, 1, 3, 3, 4, 5, 4, 3, 25, 25, 85, 75, 25, 25, 85, 75, "Alaskan Malamute"),
-    ("https://api-ninjas.com/images/dogs/portuguese_water_dog.jpg", 5, 4, 2, 4, 2, 1, 4, 5, 4, 5, 5, 3, 23, 23, 60, 50, 20, 20, 42, 35, "Portuguese Water Dog"),
-    ("https://api-ninjas.com/images/dogs/samoyed.jpg", 5, 3, 3, 3, 1, 1, 5, 5, 4, 4, 4, 5, 23.5, 23.5, 65, 50, 21, 21, 45, 35, "Samoyed"),
-    ("https://api-ninjas.com/images/dogs/whippet.jpg", 5, 5, 2, 1, 1, 1, 3, 4, 3, 3, 4, 1, 22, 22, 40, 40, 19, 19, 25, 25, "Whippet");
+    ('https://api-ninjas.com/images/dogs/bernese_mountain_dog.jpg', 5, 5, 5, 3, 3, 1, 4, 4, 3, 4, 4, 3, 27.5, 27.5, 115, 95, 25, 25, 80, 70, 'Bernese Mountain Dog'),
+    ('https://api-ninjas.com/images/dogs/miniature_schnauzer.jpg', 5, 3, 3, 4, 2, 1, 3, 4, 4, 5, 3, 5, 14, 14, 20, 20, 12, 12, 11, 11, 'Miniature Schnauzer'),
+    ('https://api-ninjas.com/images/dogs/havanese.jpg', 5, 5, 2, 3, 1, 1, 5, 5, 3, 4, 3, 4, 11.5, 11.5, 13, 13, 8.5, 8.5, 7, 7, 'Havanese'),
+    ('https://api-ninjas.com/images/dogs/bullmastiff.jpg', 3, 3, 3, 1, 3, 1, 3, 3, 5, 4, 4, 1, 27, 27, 130, 120, 25, 25, 110, 100, 'Bullmastiff'),
+    ('https://api-ninjas.com/images/dogs/newfoundland.jpg', 5, 5, 3, 2, 5, 1, 5, 3, 5, 3, 3, 1, 28, 28, 150, 120, 28, 28, 130, 100, 'Newfoundland'),
+    ('https://api-ninjas.com/images/dogs/dalmatian.jpg', 3, 3, 4, 2, 2, 1, 4, 4, 4, 4, 4, 3, 24, 24, 70, 70, 19, 19, 45, 45, 'Dalmatian'),
+    ('https://api-ninjas.com/images/dogs/maltese.jpg', 3, 3, 1, 4, 1, 1, 3, 3, 4, 3, 3, 3, 9, 9, 8.8, 8.8, 7, 7, 6.6, 6.6, 'Maltese'),
+    ('https://api-ninjas.com/images/dogs/weimaraner.jpg', 5, 3, 3, 2, 2, 1, 3, 5, 5, 5, 5, 3, 27, 27, 90, 75, 25, 25, 70, 55, 'Weimaraner'),
+    ('https://api-ninjas.com/images/dogs/basset_hound.jpg', 5, 5, 2, 3, 4, 1, 3, 3, 3, 2, 4, 4, 15, 14, 65, 65, 12, 11, 40, 40, 'Basset Hound'),
+    ('https://api-ninjas.com/images/dogs/scottish_terrier.jpg', 3, 2, 2, 3, 2, 1, 3, 4, 5, 3, 3, 4, 10, 10, 22, 21, 10, 10, 19, 18, 'Scottish Terrier'),
+    ('https://api-ninjas.com/images/dogs/rhodesian_ridgeback.jpg', 5, 3, 3, 2, 2, 1, 3, 3, 5, 4, 3, 2, 27, 27, 85, 70, 25, 25, 85, 70, 'Rhodesian Ridgeback'),
+    ('https://api-ninjas.com/images/dogs/akita.jpg', 3, 1, 3, 3, 1, 1, 2, 3, 5, 3, 4, 2, 28, 28, 130, 100, 26, 26, 100, 70, 'Akita'),
+    ('https://api-ninjas.com/images/dogs/saint_bernard.jpg', 5, 3, 3, 2, 5, 1, 3, 3, 5, 3, 3, 1, 30, 30, 180, 140, 28, 28, 140, 120, 'Saint Bernard'),
+    ('https://api-ninjas.com/images/dogs/pembroke_welsh_corgi.jpg', 3, 4, 4, 2, 1, 1, 4, 4, 5, 4, 4, 4, 12, 12, 31, 28, 10, 10, 24, 24, 'Pembroke Welsh Corgi'),
+    ('https://api-ninjas.com/images/dogs/staffordshire_bull_terrier.jpg', 5, 3, 2, 2, 3, 1, 4, 4, 5, 5, 4, 3, 16, 16, 38, 34, 14, 14, 28, 24, 'Staffordshire Bull Terrier'),
+    ('https://api-ninjas.com/images/dogs/west_highland_white_terrier.jpg', 5, 3, 3, 3, 1, 1, 4, 5, 5, 3, 4, 5, 11, 11, 20, 20, 11, 11, 15, 15, 'West Highland White Terrier'),
+    ('https://api-ninjas.com/images/dogs/irish_setter.jpg', 5, 5, 3, 3, 2, 1, 5, 5, 3, 4, 5, 3, 27, 27, 70, 60, 27, 27, 70, 60, 'Irish Setter'),
+    ('https://api-ninjas.com/images/dogs/alaskan_malamute.jpg', 3, 3, 3, 3, 1, 1, 3, 3, 4, 5, 4, 3, 25, 25, 85, 75, 25, 25, 85, 75, 'Alaskan Malamute'),
+    ('https://api-ninjas.com/images/dogs/portuguese_water_dog.jpg', 5, 4, 2, 4, 2, 1, 4, 5, 4, 5, 5, 3, 23, 23, 60, 50, 20, 20, 42, 35, 'Portuguese Water Dog'),
+    ('https://api-ninjas.com/images/dogs/samoyed.jpg', 5, 3, 3, 3, 1, 1, 5, 5, 4, 4, 4, 5, 23.5, 23.5, 65, 50, 21, 21, 45, 35, 'Samoyed'),
+    ('https://api-ninjas.com/images/dogs/whippet.jpg', 5, 5, 2, 1, 1, 1, 3, 4, 3, 3, 4, 1, 22, 22, 40, 40, 19, 19, 25, 25, 'Whippet'),
+    ('https://api-ninjas.com/images/dogs/pug.jpg',5, 4, 4, 2, 1, 1, 5, 5, 3, 4, 3, 1, 13, 13, 18, 18, 10, 10, 14, 14, 'pug');
 
 
 INSERT INTO users (
   first_name,
   last_name,
   email,
-  password
+  password_hash
 ) VALUES
-(bob, example, bob@example.com, 12345678),
-(john, doe, john@example.com, 12345678),
-(jane, smith, jane@example.com, 12345678);
+('bob', 'example', 'bob@example.com', '12345678'),
+('john', 'doe', 'john@example.com', '12345678'),
+('jane', 'smith', 'jane@example.com', '12345678');
 
 
 
