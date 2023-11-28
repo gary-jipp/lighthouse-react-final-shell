@@ -3,6 +3,9 @@ const express = require("express");
 const uniqid = require('uniqid');
 const morgan = require('morgan');
 const path = require('path');
+const { Pool } = require('pg');
+
+const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -18,13 +21,31 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // Connect to Database
-const pool = require('./database/connect');
+const pool = new Pool({
+  user: process.env.ELEPHANT_USER,
+  host: process.env.ELEPHANT_HOST,
+  database: process.env.ELEPHANT_USER,
+  password: process.env.ELEPHANT_PASSWORD,
+  port: 5432, // Replace with your PostgreSQL port
+});
 
-const { Configuration, OpenAIApi } = require("openai");
 
 // Use Routed Endpoints
 const itemRoutes = require('./routes/itemRoutes');
 app.use('/api/items', itemRoutes(pool));
+
+app.get('/api/test', async (req, res) => {
+  try {
+    // Assuming you have a table named 'items'
+    const result = await pool.query('SELECT * FROM dog_breeds');
+
+    // Send the result as JSON to the client
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing SQL query:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 // Simple Endpoint - no routes module
 app.get("/api/status", (req, res) => {
