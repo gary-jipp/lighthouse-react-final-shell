@@ -54,9 +54,12 @@ const dogOne ={
 
 
 
-async function main() {
+async function muttyAssistent(dogOne, dogTwo) {
+  
   const assistant = { id: "asst_0lf98H0dis6xlTyKeMEwTJj4" };
+  
   const dogString = JSON.stringify(dogOne) + JSON.stringify(dogTwo);
+
   const thread = await openai.beta.threads.create();
   const message = await openai.beta.threads.messages.create(thread.id, {
     role: "user",
@@ -73,6 +76,7 @@ async function main() {
 
   let timeout = 30000;
   let timeElapsed = 0;
+  let jsonObject;
 
   while (timeElapsed < timeout) {
     let retrievedRun = await openai.beta.threads.runs.retrieve(thread.id, run?.id);
@@ -88,7 +92,7 @@ async function main() {
       const description = jsonStringWithText.replace(jsonString, '').trim();
 
     try {
-      const jsonObject = JSON.parse(jsonString);
+      jsonObject = JSON.parse(jsonString);
 
       jsonObject.description = description;
 
@@ -97,7 +101,7 @@ async function main() {
       console.error('Error parsing JSON:', error);
     }
 
-      return;
+      return jsonObject;
   }
 
     await new Promise((resolve) => setTimeout(resolve, interval));
@@ -106,5 +110,5 @@ async function main() {
  
 }
 
-main();
+muttyAssistent(dogOne, dogTwo);
 
