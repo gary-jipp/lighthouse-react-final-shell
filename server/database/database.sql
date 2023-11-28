@@ -31,7 +31,7 @@ CREATE TABLE Recipes (
     description TEXT,
     instructions TEXT NOT NULL,
     nutritional_information  JSONB,
-    image_url VARCHAR(255) DEFAULT 'images/default_image.jpg' NOT NULL,
+    image_url VARCHAR(255)  NOT NULL,
     category_id  INT REFERENCES Categories(id),
     user_id INT REFERENCES Users(id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

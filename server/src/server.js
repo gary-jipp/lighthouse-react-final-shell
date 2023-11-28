@@ -21,13 +21,20 @@ app.use(morgan('dev'));
 const pool = require('./database/connect');
 
 // Use Routed Endpoints
-const itemRoutes = require('./routes/itemRoutes');
-app.use('/api/items', itemRoutes(pool));
-
-const useRoutes = require('./routes/itemRoutes');
-app.use('/api/items', itemRoutes(pool));
+const categoryRoutes = require('./routes/categoriesRoute');
+app.use('/api/categories', categoryRoutes(pool));
 
 
+
+const userRoutes = require('./routes/userRoute');
+app.use('/api/user', userRoutes(pool));
+
+
+const ingredientsRoutes = require('./routes/ingredientsRoutes');
+app.use('/api/ingredients',ingredientsRoutes(pool));
+
+const recipesRoutes = require('./routes/recipesRoutes');
+app.use('/api/recipes',recipesRoutes(pool));
 
 
 app.listen(PORT, () => {
