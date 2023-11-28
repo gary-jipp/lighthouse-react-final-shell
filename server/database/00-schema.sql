@@ -28,7 +28,9 @@ CREATE TABLE dog_breeds (
   min_height_female SMALLINT,
   min_weight_male SMALLINT,
   min_weight_female SMALLINT,
-  name VARCHAR(50) NOT NULL
+  name VARCHAR(50) NOT NULL,
+  description TEXT
+
 );
 
 CREATE TABLE users (
@@ -70,7 +72,9 @@ CREATE TABLE generated_breeds (
   min_height_male SMALLINT,
   min_height_female SMALLINT,
   min_weight_male SMALLINT,
-  min_weight_female SMALLINT
+  min_weight_female SMALLINT,
+  description TEXT
+
 );
 
 CREATE TABLE liked_generated_breeds (
