@@ -3,14 +3,14 @@ import {useCallback, useEffect, useState} from "react";
 
 const useApplicationData = function() {
   const [error, setError] = useState();
-  const [status, setStatus] = useState({});
-  const [data, setData] = useState([]);
+  const [recipes, setRecipes] = useState([{}]);
+  const [categories, setCategories] = useState([{}]);
 
   const fetchItems = useCallback(() => {
-    Promise.all([axios.get('/api/status'), axios.get('/api/items')])
+    Promise.all([axios.get('/api/recipes'), axios.get('/api/categories')])
       .then(all => {
-        setStatus(all[0].data);
-        setData(all[1].data);
+        setRecipes(all[0].data);
+        setCategories(all[1].data);
       })
       .catch(err => {
         console.log(err.message);
@@ -25,30 +25,31 @@ const useApplicationData = function() {
   }, []);
 
 
-  const addItem = function(name) {
-    axios.post("/api/items", {name})
-      .then(res => {
-        console.log(res.data);
-        setData([res.data, ...data]);
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
-  };
+  // const addItem = function(name) {
+  //   axios.post("/api/items", {name})
+  //     .then(res => {
+  //       console.log(res.data);
+  //       setData([res.data, ...data]);
+  //     })
+  //     .catch((err) => {
+  //       setError(err.message);
+  //     });
+  // };
 
-  const deleteItem = function(id) {
-    axios.delete(`/api/items/${id}`)
-      .then(res => {
-        setData(data.filter(item => item.id !== id));
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
+  // const deleteItem = function(id) {
+  //   axios.delete(`/api/items/${id}`)
+  //     .then(res => {
+  //       setData(data.filter(item => item.id !== id));
+  //     })
+  //     .catch((err) => {
+  //       setError(err.message);
+  //     });
 
-    setData(data.filter(item => item.id !== id));
-  };
+  //   setData(data.filter(item => item.id !== id));
+  // };
 
-  return {status, error, data, addItem, deleteItem, fetchItems};
+  // return {recipes,categories, error, data, addItem, deleteItem, fetchItems};
+  return {recipes,categories, error,fetchItems};
 };
 
 export default useApplicationData;
