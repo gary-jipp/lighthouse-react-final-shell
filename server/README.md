@@ -3,7 +3,7 @@
 ### Using Local Postgres Database
 - Open `psql`
 - `CREATE DATABASE demo` (or whatever name you want to use)
-- `\i database/00-schema.sql`
+- `\i database/database.sql`
 - `\i database/seeds.sql` (if you want to load seeds)
 
 ## Using Container Database (Advanced)
