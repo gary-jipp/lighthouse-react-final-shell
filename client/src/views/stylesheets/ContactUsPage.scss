@@ -1,0 +1,40 @@
+// ContactUsPage.scss
+
+.contact-us-container {
+  // Styling for the overall contact-us page container
+}
+
+.header-section {
+  text-align: center;
+  margin-top: 50px;
+
+  .header-text {
+    // Styling for Header text
+  }
+
+  .github-section {
+    float: right;
+    margin-right: 20px;
+
+    .github-icon {
+      // Styling for the GitHub icon
+    }
+  }
+}
+
+.social-media-section {
+  text-align: center;
+  margin-top: 50px;
+
+  .large-pawprint {
+    // Styling for the large pawprint icon
+
+    .social-media-icon {
+      // Styling for the social media icons 
+    }
+  }
+
+  .address-icon {
+    // Styling for the address icon
+  }
+}
