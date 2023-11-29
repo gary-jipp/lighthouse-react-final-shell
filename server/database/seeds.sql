@@ -81,7 +81,7 @@ VALUES
     'Tacos filled with spicy shrimp, slaw, and avocado',
     '{"Saute shrimp with spices.", "Fill tortillas with shrimp, slaw, and sliced avocado."}',
     '{"calories": 350, "protein": 18, "carbs": 30}',
-    'Spicy Shrimp Tacos.jpeg', -- Placeholder image URL
+    'Spicy_Shrimp_Tacos.jpeg', -- Placeholder image URL
     3,
     1
   ),
