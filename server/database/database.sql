@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS Users CASCADE;
 DROP TABLE IF EXISTS Recipes CASCADE;
 DROP TABLE IF EXISTS Ingredients CASCADE;
 DROP TABLE IF EXISTS Categories CASCADE;
+ DROP TABLE IF EXISTS  RecipeIngredients CASCADE;
 
 CREATE TABLE Users (
     id serial PRIMARY KEY,
@@ -35,4 +36,10 @@ CREATE TABLE Recipes (
     category_id  INT REFERENCES Categories(id),
     user_id INT REFERENCES Users(id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE RecipeIngredients (
+    recipe_id INT REFERENCES Recipes(id),
+    ingredient_id INT REFERENCES Ingredients(id),
+    PRIMARY KEY (recipe_id, ingredient_id)
 );
