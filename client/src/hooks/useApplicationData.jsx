@@ -1,33 +1,32 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 
-const useData = function() {
+const useApplicationData = function() {
   const [error, setError] = useState();
   const [status, setStatus] = useState({});
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios.get('/api/status')
-      .then((res) => {
-        setStatus(res.data);
+  const fetchItems = useCallback(() => {
+    Promise.all([axios.get('/api/status'), axios.get('/api/items')])
+      .then(all => {
+        setStatus(all[0].data);
+        setData(all[1].data);
       })
-      .catch((err) => {
-        setStatus({error: err.message});
-      });
-  }, []);
-
-  useEffect(() => {
-    axios.get('/api/data')
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
+      .catch(err => {
+        console.log(err.message);
         setError(err.message);
       });
   }, []);
 
+
+  // Fetch data on first render
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+
   const addItem = function(name) {
-    axios.post("/api/data", {name})
+    axios.post("/api/items", {name})
       .then(res => {
         console.log(res.data);
         setData([res.data, ...data]);
@@ -38,7 +37,7 @@ const useData = function() {
   };
 
   const deleteItem = function(id) {
-    axios.delete(`/api/data/${id}`)
+    axios.delete(`/api/items/${id}`)
       .then(res => {
         setData(data.filter(item => item.id !== id));
       })
@@ -49,7 +48,7 @@ const useData = function() {
     setData(data.filter(item => item.id !== id));
   };
 
-  return {status, error, data, addItem, deleteItem};
+  return {status, error, data, addItem, deleteItem, fetchItems};
 };
 
-export default useData;
+export default useApplicationData;
