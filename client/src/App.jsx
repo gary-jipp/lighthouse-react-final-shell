@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import './App.css';
-import useData from './hooks/useData';
 import Status from './components/Status';
-import DataList from './components/Dataist';
+import useApplicationData from './hooks/useApplicationData';
 
 export default function App() {
   const [text, setText] = useState("");
